@@ -57,8 +57,8 @@ Four VMs are launched on both compute hosts, two on each. Each pair of VMs on bo
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
-       |		  |	     ||            |                  |
-       |	          | 	     ||            |                  |
+       |                  |          ||            |                  |
+       |                  |          ||            |                  |
        |    VM_1_TS (N2)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N1)  |
@@ -91,8 +91,8 @@ Four VMs are launched on both compute hosts, two on each. Each VM in a pair on b
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
-       |		  |	     ||            |                  |
-       |		  | 	     ||            |                  |
+       |                  |          ||            |                  |
+       |                  |          ||            |                  |
        |    VM_1_TS (N1)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N2)  |
@@ -115,13 +115,13 @@ Following table shows the packets transferred by VPP and vRouter at NDR.
 ### Acronyms
 
 > **VPP:** Vector Packet Processing <br/>
-> **VM:** Virtual Machine
-> **TX:** Transmission
-> **mpps:** Million packets per second
-> **Gbps:** Giga bits per second
-> **PPS:** Packets per second
-> **TS:** TRex server
-> **TC:** TRex client
-> **NDR:** No drop rate
+> **VM:** Virtual Machine <br/>
+> **TX:** Transmission <br/>
+> **mpps:** Million packets per second <br/>
+> **Gbps:** Giga bits per second <br/>
+> **PPS:** Packets per second <br/>
+> **TS:** TRex server <br/>
+> **TC:** TRex client <br/>
+> **NDR:** No drop rate <br/>
 
   [CVPPD]: <https://github.com/OMajeed/contrail-vpp-deploy>
