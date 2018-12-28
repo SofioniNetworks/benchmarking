@@ -21,7 +21,7 @@ This document is targeted to describe the performance analysis between Tungsten 
 | Host OS | CentOS Linux release 7.6.1810; Kernel Version: 3.10.0-957.1.3.el7.x86_64
 | Guest OS | Fedora release 21; Kernel Version: 3.19.1-201.fc21.x86\_64
 | QEMU-KVM | qemu-kvm 1.5.3; libvirtd (libvirt) 4.5.0; 
-| TRex | Traffic generator; latest version (v2.49); NIC driver: igb\_uio; TRex Mode: stateless
+| TRex | Traffic generator; latest version (v2.49); NIC driver: virtio; TRex Mode: stateless
 
 ## Setup Details
 Three nodes are used in the performance analysis of **vRouter** and **VPP**. One node is controller and the rest of them are compute nodes. Controller is deployed on CentOS (7.6.1810 release) virtual machine while the compute service is installed on physical machines. Three nodes [setup][CVPPD] of Tungsten Fabric environment is fully automated. One physical node uses **VPP** as data plane and the other one uses **vRouter** . Following picture depicts the deployment setup.
