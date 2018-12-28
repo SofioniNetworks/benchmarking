@@ -1,5 +1,7 @@
 # Performance Analysis of VPP and vRouter
 
+<img src="https://media.licdn.com/dms/image/C4D0BAQGcetGJaM_8pg/company-logo_200_200/0?e=2159024400&v=beta&t=zOorZC2j6Y6c2GaKLllYxPgQ0Yn_s-9TtJC2m7eK_r8" width="50" height="50" /> **Sofioni Networks**
+
 ## Overview
 This file is target to test and analyze the performance of Tungsten Fabric's data plane, **vRouter** and vector packet processing, **VPP**. This test report provides a guide to packet processing performance testing of the considered data planes. The report includes baseline performance data and provides system configuration and test cases.
 
