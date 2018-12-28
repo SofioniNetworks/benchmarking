@@ -57,8 +57,8 @@ Four VMs are launched on both compute hosts, two on each. Each pair of VMs on bo
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
-       |		          |	         ||            |                  |
-       |		          | 	     ||            |                  |
+       |		  |	     ||            |                  |
+       |	          | 	     ||            |                  |
        |    VM_1_TS (N2)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N1)  |
@@ -91,8 +91,8 @@ Four VMs are launched on both compute hosts, two on each. Each VM in a pair on b
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
-       |		          |	         ||            |                  |
-       |		          | 	     ||            |                  |
+       |		  |	     ||            |                  |
+       |		  | 	     ||            |                  |
        |    VM_1_TS (N1)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N2)  |
@@ -110,11 +110,11 @@ Following table shows the packets transferred by VPP and vRouter at NDR.
 | vRouter |  0.26mpps | 1500 | 3.13Gbps 
 | VPP | 0.33mpps | 1500 | 3.97Gbps
 
-**Further test cases will be added soon.**
+**Note: Further test cases will be added soon.**
 
 ### Acronyms
 
-> **VPP:** Vector Packet Processing
+> **VPP:** Vector Packet Processing <br/>
 > **VM:** Virtual Machine
 > **TX:** Transmission
 > **mpps:** Million packets per second
