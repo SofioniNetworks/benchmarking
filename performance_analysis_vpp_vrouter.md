@@ -119,9 +119,12 @@ Following table shows the packets transferred by VPP and vRouter at NDR.
 > **TX:** Transmission <br/>
 > **mpps:** Million packets per second <br/>
 > **Gbps:** Giga bits per second <br/>
+> **Mbps:** Mega bits per second <br/>
 > **PPS:** Packets per second <br/>
 > **TS:** TRex server <br/>
 > **TC:** TRex client <br/>
 > **NDR:** No drop rate <br/>
+> **N1:** Network 1 <br/>
+> **N2:** Network 2 <br/>
 
   [CVPPD]: <https://github.com/OMajeed/contrail-vpp-deploy>
