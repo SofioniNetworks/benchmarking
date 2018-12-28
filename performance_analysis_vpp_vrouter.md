@@ -22,16 +22,16 @@ This file is target to test and analyze the performance of Tungsten Fabric's dat
 | TRex | Traffic generator; latest version (v2.49); NIC driver: igb\_uio; TRex Mode: stateless
 
 ## Setup Details
-Three nodes are used in the performance analysis of **vRouter** and **VPP**. One node acts as controller and the rest of nodes are compute nodes. Controller is deployed on CentOS (7.6.1810 release) virtual machine while the compute service is deployed on physical machines. Three nodes [setup][CVPPD] of Tungsten Fabric environment is fully automated. One physical node uses **VPP** as data plance and the other one uses **vRouter** as its data plane. Following picture depicts the deployment setup.
+Three nodes are used in the performance analysis of **vRouter** and **VPP**. One node is controller and the rest of them are compute nodes. Controller is deployed on CentOS (7.6.1810 release) virtual machine while the compute service is installed on physical machines. Three nodes [setup][CVPPD] of Tungsten Fabric environment is fully automated. One physical node uses **VPP** as data plane and the other one uses **vRouter** . Following picture depicts the deployment setup.
 
                              ------------------
                             |                  |
-                            |   control node   |
-                            |                  |
-                            |                  |
+                            | openstack control|
+                            |         +        |
+                            | contrail control |
                              ------------------
         ------------------           ||             ------------------
-       |   compute host   |          ||            |     compute      |
+       |     compute      |          ||            |     compute      |
        |        +         |<---------||----------->|        +         |
        |     vRouter      |                        |       VPP        |
        |                  |                        |                  |
@@ -46,17 +46,19 @@ VMs flavor used in the performance testing has:
   - Fedora 21
   
 ### Test# 1
-Four VMs are launched on both compute hosts, two on each. Each pair of VMs on both host are launched in the same network. One VM runs TRex server and the other runs TRex client. TRex server throws traffic towards client which sends it back as a reply against each request made by TRex server. The following figure describes the topology used in this test case.
+Four VMs are launched on both compute hosts, two on each. Each pair of VMs on both host are launched in the same network. One VM runs TRex server and the other runs TRex client. TRex server throws traffic towards client which sends it back as a reply against each request made by TRex server. The following figure describes the topology used in this scenario.
 
 
                              ------------------
                             |                  |
-                            |   control node   |
-                            |                  |
-                            |                  |
+                            | openstack control|
+                            |         +        |
+                            | contrail control |
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
+       |		          |	         ||            |                  |
+       |		          | 	     ||            |                  |
        |    VM_1_TS (N2)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N1)  |
@@ -80,14 +82,17 @@ Following table shows the packets transferred by VPP and vRouter at NDR.
 ### Test# 2
 Four VMs are launched on both compute hosts, two on each. Each VM in a pair on both host is launched in a different network. One VM runs TRex server and the other runs TRex client. TRex server throws traffic towards client which sends it back as a reply against each request made by TRex server. The following figure describes the topology used in this test case.
 
+
                              ------------------
                             |                  |
-                            |   control node   |
-                            |                  |
-                            |                  |
+                            | openstack control|
+                            |         +        |
+                            | contrail control |
                              ------------------
         ------------------           ||             ------------------
        | vRouter compute  |          ||            |    VPP compute   |
+       |		          |	         ||            |                  |
+       |		          | 	     ||            |                  |
        |    VM_1_TS (N1)  |<---------||----------->|    VM_1_TS (N1)  |
        |       +          |                        |         +        |
        |    VM_2_TC (N2)  |                        |    VM_2_TC (N2)  |
@@ -105,6 +110,18 @@ Following table shows the packets transferred by VPP and vRouter at NDR.
 | vRouter |  0.26mpps | 1500 | 3.13Gbps 
 | VPP | 0.33mpps | 1500 | 3.97Gbps
 
-**Further testing will be added soon.**
+**Further test cases will be added soon.**
+
+### Acronyms
+
+> **VPP:** Vector Packet Processing
+> **VM:** Virtual Machine
+> **TX:** Transmission
+> **mpps:** Million packets per second
+> **Gbps:** Giga bits per second
+> **PPS:** Packets per second
+> **TS:** TRex server
+> **TC:** TRex client
+> **NDR:** No drop rate
 
   [CVPPD]: <https://github.com/OMajeed/contrail-vpp-deploy>
