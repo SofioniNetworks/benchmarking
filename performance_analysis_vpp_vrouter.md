@@ -3,7 +3,7 @@
 <img src="https://media.licdn.com/dms/image/C4D0BAQGcetGJaM_8pg/company-logo_200_200/0?e=2159024400&v=beta&t=zOorZC2j6Y6c2GaKLllYxPgQ0Yn_s-9TtJC2m7eK_r8" width="50" height="50" /> **Sofioni Networks**
 
 ## Overview
-This file is target to test and analyze the performance of Tungsten Fabric's data plane, **vRouter** and vector packet processing, **VPP**. This test report provides a guide to packet processing performance testing of the considered data planes. The report includes baseline performance data and provides system configuration and test cases.
+This document is targeted to describe the performance analysis between Tungsten Fabric's data plane, **vRouter** and **VPP**. This report provides results and a setup guide to packet processing performance testing of the considered data planes. This report includes baseline performance data and provides system configuration and test cases.
 
 ## Platform Specifications
 ### Hardware Specifications
@@ -19,7 +19,7 @@ This file is target to test and analyze the performance of Tungsten Fabric's dat
 | Item | Description |
 | :------ | :------ |
 | Host OS | CentOS Linux release 7.6.1810; Kernel Version: 3.10.0-957.1.3.el7.x86_64
-| VM (under test) OS | Fedora release 21; Kernel Version: 3.19.1-201.fc21.x86\_64
+| Guest OS | Fedora release 21; Kernel Version: 3.19.1-201.fc21.x86\_64
 | QEMU-KVM | qemu-kvm 1.5.3; libvirtd (libvirt) 4.5.0; 
 | TRex | Traffic generator; latest version (v2.49); NIC driver: igb\_uio; TRex Mode: stateless
 
