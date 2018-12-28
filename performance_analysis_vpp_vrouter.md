@@ -65,8 +65,9 @@ Four VMs are launched on both compute hosts, two on each. Each pair of VMs on bo
 
 ##### Results
 Following table shows the packets transferred by VPP and vRouter at NDR.
-| Data Plane | Max PPS at NDR | Packet Size in Bytes | Max TX
-| :------ | :------ | :------ | :------
+
+| Data Plane | Max PPS at NDR | Packet Size in Bytes | Max TX |
+| :------ | :------ | :------ | :------ |
 | vRouter | 0.28mpps | 64  | 143.88Mbps
 | VPP | 0.36mpps | 64   | 184.86 Mbps
 | vRouter | 0.27mpps | 512 | 1.11Gbps
@@ -94,8 +95,9 @@ Four VMs are launched on both compute hosts, two on each. Each VM in a pair on b
 
 ##### Results
 Following table shows the packets transferred by VPP and vRouter at NDR.
-| Data Plane | Max PPS at NDR | Packet Size in Bytes | Max TX
-| :------ | :------ | :------ | :------
+
+| Data Plane | Max PPS at NDR | Packet Size in Bytes | Max TX |
+| :------ | :------ | :------ | :------ |
 | vRouter | 0.28mpps | 64 | 143.77Mbps
 | VPP | 0.36mpps | 64 |  184.94Mbps
 | vRouter | 0.27mpps | 512 | 1.11Gbps
